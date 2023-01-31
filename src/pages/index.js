@@ -1,42 +1,9 @@
-import { useEffect } from 'react';
 import Head from 'next/head';
 import { Inter } from '@next/font/google';
-import styles from '@/styles/Home.module.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  const sticky = 50;
-
-  useEffect(() => {
-    const topNav = document.getElementById('subHeader');
-
-    const handleScroll = () => {
-      if (window.pageYOffset >= sticky) {
-        topNav.classList.add("fixed");
-        topNav.classList.add("top-0");
-        topNav.classList.add("left-0");
-        topNav.classList.add("right-0");
-        topNav.classList.remove("border");
-        topNav.classList.remove("border-b-2");
-        topNav.classList.add("shadow-md");
-      } else {
-        topNav.classList.remove("fixed");
-        topNav.classList.remove("top-0");
-        topNav.classList.remove("left-0");
-        topNav.classList.remove("right-0");
-        topNav.classList.remove("shadow-md");
-        topNav.classList.add("border");
-        topNav.classList.add("border-b-2");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <>
       <Head>
@@ -46,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={inter.className}>
-        <div className='container mx-auto'>
+        <div className='container mx-auto transition-transform'>
 
           <h1 className="text-3xl font-bold underline">
             Hello pro!

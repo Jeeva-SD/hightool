@@ -1,10 +1,9 @@
-import Header from './header';
+import Header from './Header';
 
-const index = ({ children, window }) => {
-
+const index = ({ children }) => {
     return (
         <div>
-            <Header window={5} />
+            <Header />
             {children}
         </div>
     );
