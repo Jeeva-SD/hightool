@@ -24,9 +24,9 @@ const header = () => {
             <div className='w-full bg-black text-white'>
                 <div className='w-full lg:w-[1024px] flex justify-between items-center mx-auto h-[50px] lg:px-0 px-5'>
                     <div className='text-2xl font-bold'>
-                        <h1>Jee6</h1>
+                        <h1>HighTool</h1>
                     </div>
-                    <div className='flex gap-x-5 text-[12px] underline'>
+                    <div className='flex gap-x-5 text-[12px]'>
                         <span>Welcome to ProTags!</span>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const header = () => {
             >
                 <div className='w-[1024px] hidden lg:flex justify-between items-center mx-auto h-[50px]'>
                     <div className='text-[18px] font-semibold'>
-                        <h1>BlackTools</h1>
+                        <h1>ProTags</h1>
                     </div>
                     <div className='flex gap-x-5'>
                         {navs.map((nav, index) =>

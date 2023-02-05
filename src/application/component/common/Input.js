@@ -45,7 +45,7 @@ const Input = ({ value: customValue, placeholder: customPlaceholder, onChange, o
                     }}
                     onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                     placeholder={placeholder}
-                    className='rounded border w-full p-2 pl-[40px] outline-none transition-colors bg-slate-100 focus:bg-white hover:bg-slate-50 focus:border-slate-800'
+                    className='rounded transition-all border w-full p-2 pl-[40px] outline-none bg-slate-100 focus:bg-white hover:bg-slate-50 focus:border-slate-800'
                 />
             </div>
 

@@ -1,5 +1,8 @@
 import Head from 'next/head';
 import { Inter } from '@next/font/google';
+import { homeContent } from '@/application/assets/content/HomepageContent';
+import { FaHashtag } from 'react-icons/fa';
+import { AiFillFire } from 'react-icons/ai';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,23 +16,58 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={inter.className}>
-        <div className='container mx-auto transition-transform'>
-
-          <h1 className="text-3xl font-bold underline">
-            Hello pro!
-          </h1>
-
-          <div className='columns-1'>
-            {[1, 2, 3, 4, 5, 6].map((e, index) => {
-              return (
-                <div className='border rounded p-5 my-5 hover:shadow-lg' id={index === 3 ? 'proadsa' : ''} key={index}>
-                  While there are a number of reasons you may want to create random adjectives, one of the most common is writers looking for new ways to better describe their writing. The great thing about this adjective tool is that it can help spark creative juices just by generating new adjectives. Simply seeing a random adjective can spark the imagination to come up with the perfect vocabulary for your writing. If nothing else, this tool will give you options you likely had never considered which in itself can be a great help.
-                  This free calculator is also an excellent way to improve your creative writing. A fun and easy way to challenge yourself is to generate a random adjective and then use it in a paragraph. Writers can expand on this and generate 5 to 10 adjectives and write a page or short story using all of them. Since what will be generated is unknown, it forces the writer to use creativity to use the adjectives to make a great paragraph or short story.
-                </div>
-              );
-            })}
+        <section className='w-full flex justify-center flex-wrap my-[4%]'>
+          <div className='w-7/12 flex'>
+            {/* <h1 className='text-5xl font-extrabold text-center'>Reach your target audience with precision using our tool for optimized distribution</h1> */}
+            <h1 className='text-5xl font-extrabold text-center'>HighTool optimizes your online presence and increase your brand awareness</h1>
           </div>
-        </div>
+          <div className='lg:w-6/12 text-center my-5 text-neutral-500'>
+            {/* Introducing our AI-powered tool, designed to help you effectively reach your target audience and boost your content's impact.
+            Using advanced algorithms, it analyzes your audience demographics, preferences, and behavior to create custom strategies for maximum engagement.
+            Whether it's social media, email marketing, or other channels, our tool optimizes your content's distribution and timing for maximum reach and ROI.
+            Say goodbye to guesswork and hello to smart, data-driven content marketing with our AI tool. */}
+
+            {/* Maximize your content's impact with our AI-powered tool. Target your audience effectively by analyzing demographics, preferences, and behavior.
+            Optimize distribution and timing across channels for maximum reach and ROI. Experience smart, data-driven content marketing. */}
+
+            Say goodbye to manual efforts and hello to smart, data-driven growth with our AI tool. Reach your target audience and boost your content's impact  using advanced algorithms
+          </div>
+        </section>
+
+        <section className='w-full flex justify-center gap-2 lg:flex-nowrap flex-wrap bg-gradient-to-r from-slate-50 to-slate-100 p-12 border my-[4%]'>
+          {homeContent.map((e, index) => (
+            <div className=' p-6 shadow-md rounded bg-white hover:shadow-2xl transition-shadow w-3/12' key={index}>
+              <div className='mb-2'>
+                <h1 className="text-[1.125em] font-bold">
+                  {e.title}
+                </h1>
+              </div>
+              <div className='text-[14px]'>
+                {e.description}
+              </div>
+            </div>
+          ))}
+        </section>
+
+        <section className='w-full my-[4%] flex justify-center flex-wrap gap-5'>
+          <div className='w-full text-center'>
+            <h3 className='text-3xl font-extrabold'>We offer's you</h3>
+          </div>
+
+          <div className='mt-8 bg-slate-100 w-2/12 p-10 rounded hover:bg-slate-50'>
+            <span className='text-center w-full flex justify-center pb-5'><FaHashtag fontSize={100} /></span>
+            <h4 className='text-2xl font-semibold w-full flex justify-center'>ProTags</h4>
+          </div>
+
+          <div className='mt-8 bg-slate-100 w-2/12 p-10 rounded hover:bg-slate-50'>
+            <span className='w-full flex justify-center pb-5'><AiFillFire fontSize={100} /></span>
+            <h4 className='text-2xl font-semibold w-full flex justify-center'>Todays Trending</h4>
+          </div>
+
+          <div className='w-full flex justify-center'>
+            <button className='bg-black text-white p-3 rounded w-[200px] shadow-md hover:shadow-2xl'>Get Started</button>
+          </div>
+        </section>
       </main>
     </>
   );
