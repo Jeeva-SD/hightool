@@ -1,3 +1,4 @@
+import Footer from './Footer';
 import Header from './Header';
 
 const index = ({ children }) => {
@@ -5,6 +6,7 @@ const index = ({ children }) => {
         <div>
             <Header />
             {children}
+            <Footer />
         </div>
     );
 };

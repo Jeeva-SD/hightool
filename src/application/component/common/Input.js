@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { AiOutlineClear } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 import { RiSearch2Line } from 'react-icons/ri';
-import { BiPaste } from 'react-icons/bi';
+import { MdContentPaste } from 'react-icons/md';
 
 const Input = ({ value: customValue, placeholder: customPlaceholder, onChange, onClick, isRequesting }) => {
-    const placeholder = customPlaceholder || '';
+    const placeholder = customPlaceholder || 'Search here';
     const [value, setValue] = useState(customValue || '');
     const [loading, setLoading] = useState(isRequesting || false);
 
@@ -12,7 +12,7 @@ const Input = ({ value: customValue, placeholder: customPlaceholder, onChange, o
     useEffect(() => setLoading(isRequesting), [isRequesting]);
 
     const handleSearch = () => onClick && onClick();
-
+    const handleClear = () => setValue('');
     const handlePaste = () => {
         navigator.clipboard.readText().then(
             cliptext => (setValue(cliptext)),
@@ -20,53 +20,41 @@ const Input = ({ value: customValue, placeholder: customPlaceholder, onChange, o
         );
     };
 
-    const handleClear = () => setValue('');
-
     return (
-        <div className='w-full lg:w-8/12 mx-auto m-5'>
-            <div className='w-100 flex mx-5 lg:mx-0'>
-                <button className='relative left-[30px]'>
-                    {loading && <span className="flex items-center justify-center">
-                        <span className="animate-ping absolute h-3 w-full rounded-full bg-sky-400 opacity-75"></span>
+        <div className="relative rounded-md shadow-sm">
+            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center p-5">
+                <span className="text-gray-500 sm:text-sm">
+                    {loading ? <span className="flex items-center justify-center">
+                        <span className="animate-ping absolute h-4 w-4 rounded-full bg-sky-400 opacity-75"></span>
                         <span className="rounded-full h-3 w-3 bg-sky-500"></span>
-                    </span>}
-
-                    {!loading && <span>
-                        <span className="h-3 w-3 flex items-center">
-                            <RiSearch2Line />
-                        </span>
-                    </span>}
-                </button>
-                <input
-                    type={'text'}
-                    value={value}
-                    onChange={(e) => {
-                        setValue(e.target.value);
-                    }}
-                    onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                    placeholder={placeholder}
-                    className='rounded transition-all border w-full p-2 pl-[40px] outline-none bg-slate-100 focus:bg-white hover:bg-slate-50 focus:border-slate-800'
-                />
+                    </span> : <RiSearch2Line />}
+                </span>
             </div>
 
-            <div className='w-100 flex mx-5 lg:mx-0 my-3 justify-center lg:justify-end gap-2'>
-                <button onClick={() => handleSearch()} className='w-3/12 lg:w-2/12 transition-colors rounded border border-black bg-black text-white hover:bg-white hover:text-black p-1'>
-                    <div className='flex justify-center items-center gap-1'>
-                        <RiSearch2Line fontSize={13} /> search
-                    </div>
-                </button>
+            <input
+                type="text"
+                name="search"
+                id="search"
+                value={value}
+                placeholder={placeholder}
+                onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+                onChange={e => setValue(e.target.value)}
+                className="block w-full rounded-md 
+                            pr-20 pl-12 p-3
+                           shadow-md
+                           border
+                           border-t 
+                            sm:text-sm  
+                            outline-none 
+                            hover:bg-slate-50 
+                            focus:bg-white 
+                            focus:border-black 
+                            transition-all"
+            />
 
-                <button onClick={() => handlePaste()} className='w-3/12 lg:w-2/12 transition-colors rounded border border-black bg-black text-white hover:bg-white hover:text-black p-1'>
-                    <div className='flex justify-center items-center gap-1'>
-                        <BiPaste fontSize={13} /> paste
-                    </div>
-                </button>
-
-                <button onClick={() => handleClear()} className='w-3/12 lg:w-2/12 transition-colors rounded border border-black bg-black text-white hover:bg-white hover:text-black p-1'>
-                    <div className='flex justify-center items-center gap-1'>
-                        <AiOutlineClear fontSize={13} /> clear
-                    </div>
-                </button>
+            <div className="absolute inset-y-0 right-0 flex items-center p-5 gap-3">
+                <span className='cursor-pointer' onClick={handlePaste}><MdContentPaste fontSize={13} /></span>
+                <span className='cursor-pointer' onClick={handleClear}><AiOutlineClose fontSize={13} /></span>
             </div>
         </div >
     );
