@@ -1,14 +1,16 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { Inter } from '@next/font/google';
-import { homeContent } from '@/application/assets/content/HomepageContent';
+import Image from 'next/image';
 import Rainbow from '../../application/component/common/Rainbow';
 import { youtubeFeatures } from '@/application/assets/content/youtube';
-import Image from 'next/image';
 import ytPreview from '../../../public/youtube_preview.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function ProTagsIndex() {
+    const { push } = useRouter();
+
     return (
         <>
             <Head>
@@ -38,11 +40,11 @@ export default function Home() {
                             <h3 className='w-full text-center font-semibold leading-7 text-black'>
                                 ProTags / Youtube Tag Generator
                             </h3>
-                            {/* <Image src={'http://localhost:3000/youtube_preview.png'} width={500} height={500} className='shadow-2xl rounded-lg lg:w-auto w-5/6 border-t-[15px] border-slate-900' /> */}
                             <Image src={ytPreview} width={500} height={500} className='shadow-2xl rounded-lg lg:w-auto w-5/6 border-t-[15px] border-slate-900' />
 
                             <span className='w-full flex justify-center mt-8'>
-                                <button className='text-center rounded-md bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-gray-800'>
+                                <button onClick={() => push('/protags/youtube')}
+                                    className='text-center rounded-md bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-gray-800'>
                                     Get Started
                                 </button>
                             </span>

@@ -1,6 +1,3 @@
-import { MdPublishedWithChanges, MdTransform } from 'react-icons/md';
-import { GiHighShot } from 'react-icons/gi';
-import { AiFillUnlock } from 'react-icons/ai';
 import { TbNumber1, TbNumber2, TbNumber3, TbNumber4 } from 'react-icons/tb';
 
 // export const homeContent = [

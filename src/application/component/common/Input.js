@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { RiSearch2Line } from 'react-icons/ri';
 import { MdContentPaste } from 'react-icons/md';
@@ -15,7 +15,7 @@ const Input = ({ value: customValue, placeholder: customPlaceholder, onChange, o
     const handleClear = () => setValue('');
     const handlePaste = () => {
         navigator.clipboard.readText().then(
-            cliptext => (setValue(cliptext)),
+            clipText => (setValue(clipText)),
             err => console.log(err)
         );
     };

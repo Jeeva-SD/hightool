@@ -1,10 +1,12 @@
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import TopBow from '@/application/component/common/TopBow';
 import BotBow from '@/application/component/common/BotBow';
-import Head from 'next/head';
 import { AiFillFire } from 'react-icons/ai';
 import { FaHashtag } from 'react-icons/fa';
 
 export default function Example() {
+  const { push } = useRouter();
 
   return (
     <>
@@ -46,8 +48,8 @@ export default function Example() {
                       Explore HighTool
                     </h3>
                     <div className='w-full h-20 flex justify-center items-center gap-8'>
-                      <span><FaHashtag fontSize={35} /></span>
-                      <span><AiFillFire fontSize={35} /></span>
+                      <span onClick={() => push('/protags')} className='cursor-pointer'><FaHashtag fontSize={35} /></span>
+                      <span className='cursor-not-allowed'><AiFillFire fontSize={35} /></span>
                     </div>
                   </div>
                 </div>

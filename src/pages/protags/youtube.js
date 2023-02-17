@@ -1,13 +1,8 @@
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
 import { Inter } from '@next/font/google';
 import axios from 'axios';
 import Input from '@/application/component/common/Input';
-import { youtubeFeatures } from '@/application/assets/content/youtube';
-import { GoDiffRemoved } from 'react-icons/go';
-import { MdContentCopy } from 'react-icons/md';
-import { BiAddToQueue } from 'react-icons/bi';
-import { homeContent } from '@/application/assets/content/HomepageContent';
 import YtBow from '../../application/component/common/YtBow';
 import Features from '../../application/component/protags/youtube/Features';
 
@@ -15,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
     const [title, setTitle] = useState([]);
-    const [initialLoad, setInitialLoad] = useState(true);
+    const [isSearchDone, setIsSearchDone] = useState(false);
     const [tags, setTags] = useState([]);
     const [loading, setLoading] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState([]);
@@ -49,13 +44,13 @@ export default function Home() {
             setTags(data.data);
             setLoading(false);
             setSelectedIndex([]);
-            setInitialLoad(false);
+            setIsSearchDone(false);
         }
         else {
             setTags([]);
             setLoading(false);
             setSelectedIndex([]);
-            setInitialLoad(false);
+            setIsSearchDone(false);
         }
     };
 
@@ -102,7 +97,7 @@ export default function Home() {
                                     );
                                 })}
 
-                                {tags?.length === 0 && <span className='font-mono'>No Tags Found 🙄</span>}
+                                {isSearchDone && tags?.length === 0 && <span className='font-mono'>No Tags Found 🙄</span>}
                             </div>
                         </div>
 
@@ -110,8 +105,8 @@ export default function Home() {
                             <button onClick={() => handleCopy()}
                                 disabled={tags?.length === 0}
                                 className='w-11/12 lg:w-2/12 transition-colors rounded border border-black bg-black text-white hover:bg-transparent hover:text-black p-1'>
-                                <div className='flex justify-center items-center gap-1'>
-                                    <MdContentCopy /><sapn>Copy</sapn>
+                                <div className='flex justify-center items-center gap-1 cursor-pointer'>
+                                    <span>Copy</span>
                                 </div>
                             </button>
                         </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const TopBow = ({ start = '#9089FC', end = '#FF80B5' }) => {
     return (

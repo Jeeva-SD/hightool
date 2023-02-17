@@ -6,16 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "buildcss": "npx tailwindcss -o build.css --minify"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.10",
     "@next/font": "13.1.5",
     "axios": "^1.2.5",
     "next": "13.1.5",
+    "next-pwa": "^5.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
