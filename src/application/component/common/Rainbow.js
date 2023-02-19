@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import beams from '../../../../public/beams.jpg';
+import beams from '../../../../public/img/beams.jpg';
 
 const Rainbow = ({ right = '', top, bottom, left }) => {
     return (

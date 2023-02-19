@@ -1,11 +1,36 @@
-import { Fragment, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiFillHome, AiFillTag, AiOutlineClose } from 'react-icons/ai';
+import { MdPrivacyTip } from 'react-icons/md';
+import { BiCookie, BiHash } from 'react-icons/bi';
+import { FaNewspaper } from 'react-icons/fa';
 
-export default function Example({ isOpen, setIsOpen }) {
+export default function SideOver({ isOpen, setIsOpen }) {
+    const { route, push } = useRouter();
+
     const [open, setOpen] = useState(false);
 
     useEffect(() => setOpen(isOpen), [isOpen]);
+
+    const navs = [
+        { title: 'Home', selected: false, icon: <AiFillHome />, path: '/' },
+        { title: 'ProTags', selected: false, icon: <BiHash />, path: '/protags' },
+        { title: 'YouTube Tag Generator', selected: false, icon: <AiFillTag />, path: '/protags/youtube' },
+        { title: 'Terms and Conditions', selected: false, icon: <FaNewspaper />, path: '/legal/terms' },
+        { title: 'Privacy Policy', selected: false, icon: <MdPrivacyTip />, path: '/legal/privacy' },
+        { title: 'Cookie Policy', selected: false, icon: <BiCookie />, path: '/legal/cookies' },
+    ];
+
+    const sideBarNavs = useMemo(() => {
+        return navs.map(nav => {
+            if (route === nav.path) {
+                return { ...nav, selected: true };
+            }
+
+            return nav;
+        });
+    }, [route]);
 
     return (
         <Transition.Root show={open} as={Fragment}>
@@ -35,39 +60,35 @@ export default function Example({ isOpen, setIsOpen }) {
                                 leaveTo="translate-x-full"
                             >
                                 <Dialog.Panel className="pointer-events-auto relative w-screen max-w-md">
-                                    <Transition.Child
-                                        as={Fragment}
-                                        enter="ease-in-out duration-500"
-                                        enterFrom="opacity-0"
-                                        enterTo="opacity-100"
-                                        leave="ease-in-out duration-500"
-                                        leaveFrom="opacity-100"
-                                        leaveTo="opacity-0"
-                                    >
-                                        <div className="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4">
-                                            <button
-                                                type="button"
-                                                className="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                                    <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+                                        <div className="px-4 sm:px-6 flex justify-between border-b pb-5">
+                                            <Dialog.Title className="text-lg font-bold">HighTool</Dialog.Title>
+                                            <Dialog.Title className="text-lg font-medium text-gray-900 cursor-pointer"
                                                 onClick={() => {
                                                     setOpen(false);
                                                     setIsOpen(false);
-                                                }}
-                                            >
-                                                <span className="sr-only">Close panel</span>
-                                                <AiOutlineClose className="h-6 w-6" aria-hidden="true" />
-                                            </button>
+                                                }}>
+                                                <AiOutlineClose />
+                                            </Dialog.Title>
                                         </div>
-                                    </Transition.Child>
-                                    <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
-                                        <div className="px-4 sm:px-6">
-                                            <Dialog.Title className="text-lg font-medium text-gray-900">Panel title</Dialog.Title>
-                                        </div>
-                                        <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                                            {/* Replace with your content */}
-                                            <div className="absolute inset-0 px-4 sm:px-6">
-                                                <div className="h-full border-2 border-dashed border-gray-200" aria-hidden="true" />
+
+                                        <div className="lg:hidden" id="mobile-menu">
+                                            <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+                                                {sideBarNavs.map((nav, index) => {
+                                                    return <span
+                                                        key={index}
+                                                        onClick={() => {
+                                                            push(nav.path);
+                                                            setOpen(false);
+                                                            setIsOpen(false);
+                                                        }}
+                                                        className={`${nav.selected ? 'bg-gray-900 text-white' : 'text-gray-600'} ${index === 3 && 'border-t rounded-none hover:rounded-md'}  hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium cursor-pointer flex items-center`}
+                                                    >
+                                                        <span className='mx-1'>{nav.icon}</span>
+                                                        <span className='mx-1'>{nav.title}</span>
+                                                    </span>;
+                                                })}
                                             </div>
-                                            {/* /End replace */}
                                         </div>
                                     </div>
                                 </Dialog.Panel>

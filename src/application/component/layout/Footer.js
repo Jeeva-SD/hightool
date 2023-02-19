@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className='font-semibold w-full'>HighTool</div>
                     <div className='text-gray-600 w-full text-[15px] my-2'>© 2023 Hightool.net. All rights reserved.</div>
 
-                    <div className="flex justify-center items-center gap-5 lg:w-6/12 w-full flex-wrap">
+                    <div className="flex justify-center items-center gap-5 lg:w-auto md:w-full w-full flex-wrap">
                         <div
                             className='cursor-pointer text-[15px] text-gray-600 hover:text-violet-500'
                             onClick={() => push({ pathname: '/legal/privacy' })}

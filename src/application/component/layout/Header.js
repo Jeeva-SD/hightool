@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useRouter } from "next/router";
-import { AiOutlineBars } from 'react-icons/ai';
 import SideOver from '../layout/SideOver';
+import { AiOutlineBars } from 'react-icons/ai';
 import { home, proTags, heads } from '../common/Navigation';
 
 const header = () => {
@@ -29,14 +29,14 @@ const header = () => {
                         <h1>HighTool</h1>
                     </div>
                     <div className='flex gap-x-5 text-[12px]'>
-                        <span>Welcome to ProTags!</span>
+                        <span>Welcome to HighTool.net</span>
                     </div>
                 </div>
             </div>
 
             <div
                 id='subHeader'
-                className='w-full bg-[#ffffffec] border-b transition-all sticky top-0 z-10'
+                className='w-full bg-[#ffffffec] border-b transition-all sticky top-0 z-10 shadow-md'
             >
                 <div className='w-[1024px] hidden lg:flex justify-between items-center mx-auto h-[50px]'>
                     <div className='text-[18px] font-semibold cursor-pointer' onClick={() => push(mainRoute)}>
@@ -46,8 +46,7 @@ const header = () => {
                         {routes.map((nav, index) =>
                             <span key={index}
                                 onClick={() => push({ pathname: nav.path })}
-                                // className={`cursor-pointer font-semibold p-2 hover:bg-slate-100 rounded ${route === nav.path && 'text-blue-700'}`}
-                                className={`cursor-pointer font-semibold py-3 px-2 hover:bg-slate-100 ${route === nav.path && 'border-b-2 border-b-slate-400 border-sky-600 rounded-none'}`}
+                                className={`cursor-pointer font-semibold py-3 px-2 hover:text-slate-500 ${route === nav.path && 'border-b-4 border-b-slate-400 -600 rounded-none'}`}
                             >
                                 {nav.name}
                             </span>)
@@ -59,7 +58,7 @@ const header = () => {
                     <div className='text-[18px] font-semibold cursor-pointer' onClick={() => push(mainRoute)}>
                         <h1>{mainHeadings}</h1>
                     </div>
-                    <div className='flex gap-x-5 cursor-pointer' onClick={() => setOpen(!open)}>
+                    <div className='flex gap-x-5 cursor-pointer' onClick={() => setOpen(true)}>
                         <AiOutlineBars fontSize={20} />
                     </div>
                 </div>

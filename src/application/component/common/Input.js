@@ -53,8 +53,8 @@ const Input = ({ value: customValue, placeholder: customPlaceholder, onChange, o
             />
 
             <div className="absolute inset-y-0 right-0 flex items-center p-5 gap-3">
-                <span className='cursor-pointer' onClick={handlePaste}><MdContentPaste fontSize={13} /></span>
-                <span className='cursor-pointer' onClick={handleClear}><AiOutlineClose fontSize={13} /></span>
+                <span className='cursor-pointer text-gray-500 hover:text-black' onClick={handlePaste}><MdContentPaste fontSize={13} /></span>
+                <span className='cursor-pointer text-gray-500 hover:text-black' onClick={handleClear}><AiOutlineClose fontSize={13} /></span>
             </div>
         </div >
     );
