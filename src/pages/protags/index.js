@@ -19,7 +19,7 @@ export default function ProTagsIndex() {
                     content="ProTags is a tool that helps you to create relevant and effective tags for their videos or posts. And helps users to react wider audience. 
                     ProTags contains tools like Youtube Tag generator which generates relevant YouTube tags based on your title" />
                 <meta name="keywords"
-                    content="youtube tag generator, how to tag youtube videos, youtube tag generator free, how to properly tag your youtube videos, best tag generator for youtube, youtube tags, tag generator, youtube tag generator app, youtube video tag generator, how to find viral tag for youtube video, youtube seo" />
+                    content="youtube tag generator, how to tag youtube videos, youtube tag generator free, how to properly tag your youtube videos, best tag generator for youtube, youtube tags, tag generator, youtube tag generator app, youtube video tag generator, how to find viral tag for youtube video, youtube seo, hightool, hightool.net" />
             </Head>
 
             <Rainbow right='calc(50%-11rem)' />
@@ -39,10 +39,10 @@ export default function ProTagsIndex() {
                         </div>
 
                         <span className='w-full flex flex-wrap justify-center gap-5'>
-                            <h3 className='w-full text-center font-semibold leading-7 text-black'>
+                            <h2 className='w-full text-center font-semibold leading-7 text-black'>
                                 ProTags / Youtube Tag Generator
-                            </h3>
-                            <Image src={ytPreview} width={500} height={500} className='shadow-2xl rounded-lg lg:w-auto w-5/6 border-t-[15px] border-slate-900' />
+                            </h2>
+                            <Image src={ytPreview} width={500} height={500} className='shadow-2xl rounded-lg lg:w-auto w-5/6 border-t-[15px] border-slate-900' alt="HighTool.net" />
 
                             <span className='w-full flex justify-center mt-8'>
                                 <button onClick={() => push('/protags/youtube')}
@@ -57,7 +57,7 @@ export default function ProTagsIndex() {
                 <div className='w-11/12 mx-auto'>
                     <div className='grid my-[30px] grid-cols-1'>
                         <h3 className='text-[23px] lg:text-4xl font-bold mx-auto lg:my-3'>Unleash the Power of YouTube tags</h3>
-                        <h6 className='mx-auto mb-5'>Unlock Your Video's True Potential with ProTag</h6>
+                        <h4 className='mx-auto mb-5'>Unlock Your Video's True Potential with ProTag</h4>
                     </div>
                     <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
                         {youtubeFeatures.map((features, index) => (

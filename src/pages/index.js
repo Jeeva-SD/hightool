@@ -15,7 +15,7 @@ export default function Example() {
         <meta name="description" content="HighTool provides you the variety of useful tools for content creators and marketers. One of its
         main features is a YouTube tag generator, which allows you to generate relevant tags for your YouTube videos to help you to get discovered 
         by a wider audience" />
-        <meta name="keywords" content="keyword research, SEO tools, youtube tag generator, instagram tag generator, tiktok tag generator, hightool, analytics, keyword generator" />
+        <meta name="keywords" content="keyword research, SEO tools, youtube tag generator, instagram tag generator, tiktok tag generator, hightool, analytics, keyword generator, hightools, hightool.net" />
       </Head>
 
       <div className="isolate bg-white">
@@ -45,9 +45,9 @@ export default function Example() {
 
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <div className='w-full flex flex-wrap justify-center'>
-                    <h3 className='text-center font-mono font-semibold leading-7 text-black'>
+                    <h2 className='text-center font-mono font-semibold leading-7 text-black'>
                       Explore HighTool
-                    </h3>
+                    </h2>
                     <div className='w-full h-20 flex justify-center items-center gap-8'>
                       <span onClick={() => push('/protags')} className='cursor-pointer'><FaHashtag fontSize={35} /></span>
                       <span className='cursor-not-allowed'><AiFillFire fontSize={35} /></span>
