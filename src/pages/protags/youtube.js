@@ -70,7 +70,7 @@ export default function Home() {
                 <div className='flex flex-wrap lg:min-h-[90vh] h-auto justify-center items-center gap-0 pt-20 lg:pb-20 pb-12'>
                     <div className='flex w-full flex-wrap justify-center gap-3'>
                         <div className='w-full flex justify-center'>
-                            <h1 className='lg:text-4xl text-2xl font-bold'>Maximize Your YouTube Reach</h1>
+                            <h1 className='lg:text-4xl text-2xl font-bold text-center'>Maximize Your YouTube Reach</h1>
                         </div>
                         <div className='lg:w-7/12 w-11/12'>
                             <Input onChange={(e) => setTitle(e)} onClick={() => handleSearch()} isRequesting={loading} />

@@ -15,7 +15,7 @@ const Footer = () => {
                             className='cursor-pointer text-[15px] text-gray-600 hover:text-violet-500'
                             onClick={() => push({ pathname: '/legal/privacy' })}
                         >
-                            Privacy-policy
+                            Privacy
                         </div>
 
                         <div className='font-thin opacity-50'> | </div>
@@ -24,7 +24,7 @@ const Footer = () => {
                             className=' cursor-pointer text-[15px] text-gray-600'
                             onClick={() => push({ pathname: '/legal/terms' })}
                         >
-                            Terms and Conditions
+                            Terms
                         </div>
 
                         <div className='font-thin opacity-50'> | </div>
