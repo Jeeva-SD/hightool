@@ -1,9 +1,9 @@
 {
   "name": "HighTool.net",
   "short_name": "HighTool",
-  "start_url": "./src/pages/index.js",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "start_url": "/",
+  "theme_color": "#000",
+  "background_color": "#000",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",

@@ -87,7 +87,7 @@ export default function Home() {
                     </div>
 
                     <div className='w-full lg:h-4/6 md:h-4/6 h-auto flex flex-wrap justify-center gap-5 my-5'>
-                        <div className='lg:w-7/12 w-11/12 lg:h-auto lg:min-h-[200px] min-h-[500px] flex justify-center items-center rounded-md shadow-md border border-t bg-white'>
+                        <div className='lg:w-7/12 w-11/12 lg:h-auto lg:min-h-[300px] min-h-[500px] flex justify-center items-center rounded-md shadow-md border border-t bg-white'>
                             <div className='w-full h-full flex justify-center items-center flex-wrap gap-3 p-10'>
                                 {tags?.map((tag, index) => {
                                     return (

@@ -28,7 +28,7 @@ export default function ProTagsIndex() {
                 <div className='w-full flex justify-center'>
                     <div className='lg:w-6/12 w-full flex flex-wrap items-center lg:py-24 py-16'>
                         <div className='mb-10'>
-                            <h1 className='text-center lg:text-4xl text-[15px] font-extrabold'>
+                            <h1 className='text-center lg:text-4xl text-[18px] font-extrabold px-2 lg:px-0'>
                                 Streamline Your SEO Strategy with ProTags
                             </h1>
 
@@ -56,18 +56,18 @@ export default function ProTagsIndex() {
 
                 <div className='lg:w-10/12 md:w-10/12 w-11/12 mx-auto'>
                     <div className='grid my-[30px] grid-cols-1'>
-                        <h3 className='text-[15px] lg:text-4xl mb-3 font-bold mx-auto lg:my-3 text-center'>Unleash the Power of YouTube tags</h3>
-                        <h4 className='mx-auto mb-5 text-center lg:text-[15px] text-[10px]'>Unlock Your Video's True Potential with ProTag</h4>
+                        <h3 className='text-[18px] lg:text-4xl mb-3 font-bold mx-auto lg:my-3 text-center'>Unleash the Power of YouTube tags</h3>
+                        <h4 className='mx-auto mb-5 text-center lg:text-[15px] text-[12px]'>Unlock Your Video's True Potential with ProTag</h4>
                     </div>
                     <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
                         {youtubeFeatures.map((features, index) => (
                             <div className='border p-6 rounded bg-white hover:shadow-2xl transition-shadow' style={{ boxShadow: '.2s ease' }} key={index}>
                                 <div className='mb-2'>
-                                    <h1 className="text-[1.125em] font-bold">
+                                    <h1 className="text-[1.125em] font-bold text-center lg:text-start">
                                         {features.sortTitle}
                                     </h1>
                                 </div>
-                                <div className='text-[14px]'>
+                                <div className='text-[14px] text-justify lg:text-start'>
                                     {features.sortDescription}
                                 </div>
                             </div>
