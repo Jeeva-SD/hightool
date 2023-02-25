@@ -38,6 +38,8 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png" />
         <link rel="mask-icon" href="/fav/maskable_icon_x512.png" color="#ffff" />
         <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png" />
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6663847551285629" crossorigin="anonymous"></script>
       </Head>
 
       <Layout>
