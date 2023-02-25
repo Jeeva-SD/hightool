@@ -29,6 +29,8 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:title" content="HighTool" />
         <meta name="twitter:description" content="HighTool.net contain popular tools like YouTube tag generator and more." />
         <meta name="twitter:image" content="https://hightool.net/fav/android-chrome-192x192.png" />
+    
+        <meta name="google-site-verification" content="vH97xdO0p3T4lidmLNaW6w05iWQKG9mqo2ZjUc7Sd0w" />
 
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/fav/favicon-16x16.png" />
