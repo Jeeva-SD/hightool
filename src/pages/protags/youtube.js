@@ -5,6 +5,7 @@ import axios from 'axios';
 import Input from '@/application/component/common/Input';
 import YtBow from '../../application/component/common/YtBow';
 import Features from '../../application/component/protags/youtube/Features';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -87,9 +88,9 @@ export default function Home() {
                                 data-ad-slot="4890803756"
                                 data-ad-format="auto"
                                 data-full-width-responsive="true"></ins>
-                            <script>
-                                {(adsbygoogle = window.adsbygoogle || []).push({})}
-                            </script>
+                            <Script>
+                                {`(adsbygoogle = window?.adsbygoogle || []).push({})`}
+                            </Script>
                         </div>
 
                         <div className='lg:hidden md:hidden w-full flex justify-center'>
