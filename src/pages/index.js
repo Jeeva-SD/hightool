@@ -12,10 +12,16 @@ export default function Example() {
     <>
       <Head>
         <title>HighTool</title>
-        <meta name="description" content="HighTool provides you the variety of useful tools for content creators and marketers. One of its
+        <meta
+          name="description"
+          content="HighTool provides you the variety of useful tools for content creators and marketers. One of its
         main features is a YouTube tag generator, which allows you to generate relevant tags for your YouTube videos to help you to get discovered 
-        by a wider audience" />
-        <meta name="keywords" content="keyword research, SEO tools, youtube tag generator, instagram tag generator, tiktok tag generator, hightool, analytics, keyword generator, hightools, hightool.net" />
+        by a wider audience. Hightool, hightool.net, protags, youtube tag generator, high, tool, rapidtags, keyword tool"
+        />
+        <meta
+          name="keywords"
+          content="keyword research, SEO tools, youtube tag generator, instagram tag generator, tiktok tag generator, hightool, analytics, keyword generator,Hightool, hightool.net, protags, youtube tag generator, high, tool, rapidtags, keyword tool"
+        />
       </Head>
 
       <div className="isolate bg-white">

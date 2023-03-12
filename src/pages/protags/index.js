@@ -17,7 +17,7 @@ export default function ProTagsIndex() {
                 <title>Pro Tags</title>
                 <meta name="description"
                     content="ProTags is a tool that helps you to create relevant and effective tags for their videos or posts. And helps users to react wider audience. 
-                    ProTags contains tools like Youtube Tag generator which generates relevant YouTube tags based on your title" />
+                    youtube tag generator, how to tag youtube videos, youtube tag generator free, how to properly tag your youtube videos, best tag generator for youtube, youtube tags, tag generator, youtube tag generator app, youtube video tag generator, how to find viral tag for youtube video, youtube seo, hightool, hightool.net" />
                 <meta name="keywords"
                     content="youtube tag generator, how to tag youtube videos, youtube tag generator free, how to properly tag your youtube videos, best tag generator for youtube, youtube tags, tag generator, youtube tag generator app, youtube video tag generator, how to find viral tag for youtube video, youtube seo, hightool, hightool.net" />
             </Head>

@@ -58,11 +58,15 @@ export default function Home() {
         <>
             <Head>
                 <title>Youtube Tag Generator | HigtTool</title>
-                <meta name="description" content="ProTags is a powerful YouTube tag generator that is designed to help content creators 
-                optimize their videos for maximum discoverability on the platform. 
-                The tool uses advanced algorithms and data analytics to generate the most effective tags for your youtube video." />
-                <meta name="keywords"
-                    content="youtube tag generator, how to tag youtube videos, tag generator for youtube, youtube tag generator free, youtube tags, best tag generator for youtube, tag generator, how to tag youtube videos to get more views, how to find viral tag for youtube video, youtube seo, hightool, hightool.net" />
+                <meta
+                    name="description"
+                    content="ProTags is a powerful YouTube tag generator that helps content creators to 
+                optimize their videos on YouTube. YouTube tag generator,youtube keyword generator, how to tag YouTube videos, rapidtag generator, tag generator for YouTube, best tag generator for youtube."
+                />
+                <meta
+                    name="keywords"
+                    content="youtube tag generator, how to tag youtube videos, rapidtag generator, tag generator for youtube, youtube tag generator free, youtube tags, best tag generator for youtube, tag generator, how to tag youtube videos to get more views, how to find viral tag for youtube video, youtube seo, hightool, hightool.net"
+                />
             </Head>
 
             <YtBow />
@@ -74,6 +78,18 @@ export default function Home() {
                         </div>
                         <div className='lg:w-7/12 w-11/12'>
                             <Input onChange={(e) => setTitle(e)} onClick={() => handleSearch()} isRequesting={loading} />
+                        </div>
+
+                        <div className='lg:w-7/12 w-11/12 flex justify-center'>
+                            <ins className="adsbygoogle"
+                                style={{ display: 'block' }}
+                                data-ad-client="ca-pub-6663847551285629"
+                                data-ad-slot="4890803756"
+                                data-ad-format="auto"
+                                data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({ });
+                            </script>
                         </div>
 
                         <div className='lg:hidden md:hidden w-full flex justify-center'>

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '../application/component/layout';
 import '@/styles/globals.css';
+import Script from 'next/script';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -29,7 +30,7 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:title" content="HighTool" />
         <meta name="twitter:description" content="HighTool.net contain popular tools like YouTube tag generator and more." />
         <meta name="twitter:image" content="https://hightool.net/fav/android-chrome-192x192.png" />
-    
+
         <meta name="google-site-verification" content="vH97xdO0p3T4lidmLNaW6w05iWQKG9mqo2ZjUc7Sd0w" />
 
         <link rel="manifest" href="/manifest.json" />
@@ -38,9 +39,9 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png" />
         <link rel="mask-icon" href="/fav/maskable_icon_x512.png" color="#ffff" />
         <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png" />
-    
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6663847551285629" crossorigin="anonymous"></script>
       </Head>
+
+      <Script onReady={() => console.info('GS')} strategy='lazyOnload' async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6663847551285629" crossorigin="anonymous"></Script>
 
       <Layout>
         <Component {...pageProps} />
