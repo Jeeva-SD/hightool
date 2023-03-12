@@ -22,7 +22,7 @@ export default function ProTagsIndex() {
                     content="youtube tag generator, how to tag youtube videos, youtube tag generator free, how to properly tag your youtube videos, best tag generator for youtube, youtube tags, tag generator, youtube tag generator app, youtube video tag generator, how to find viral tag for youtube video, youtube seo, hightool, hightool.net" />
             </Head>
 
-            <Rainbow right='calc(50%-11rem)' />
+            <Rainbow />
 
             <main className={inter.className}>
                 <div className='w-full flex justify-center'>
